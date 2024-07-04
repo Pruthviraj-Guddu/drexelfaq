@@ -83,7 +83,7 @@
 
           <p style="font-size: 1rem" id="last-updated">Last updated: </p>
           <script>
-            fetch('https://api.github.com/repos/Pruthviraj-Guddu/Pruthviraj-Guddu.github.io/commits/main')
+            fetch('https://api.github.com/repos/Pruthviraj-Guddu/drexelfaq/commits/main')
               .then(response => response.json())
               .then(data => {
                 const commitDate = new Date(data.commit.author.date);
