@@ -37,7 +37,7 @@
         color: #4b4949;
       }
       #about {
-        background-image: url("Images/tumbleweed-emptystate-lightbg.gif"); /* Replace 'path_to_your_image.jpg' with the actual path to your image */
+        background-image: url("Images/tumbleweed-emptystate-lightbg.gif"); 
         background-size: cover; /* Ensures the background image covers the entire section */
         background-position: center; /* Centers the background image */
         /*padding: 20px; /* Add padding to give some space around the content */
@@ -81,25 +81,31 @@
         <div>
           <h1>Welcome to Drexel University</h1>
 
-          <p style="font-size: 1rem" id="last-updated">Last updated: </p>
+          <p style="font-size: 1rem" id="last-updated">Last updated:</p>
           <script>
-            fetch('https://api.github.com/repos/Pruthviraj-Guddu/drexelfaq/commits/main')
-              .then(response => response.json())
-              .then(data => {
+            fetch(
+              "https://api.github.com/repos/Pruthviraj-Guddu/drexelfaq/commits/main"
+            )
+              .then((response) => response.json())
+              .then((data) => {
                 const commitDate = new Date(data.commit.author.date);
-                const formattedDate = commitDate.toLocaleString('en-US', {
-                  timeZone: 'America/New_York',
-                  year: 'numeric',
-                  month: 'long',
-                  day: 'numeric',
-                  hour: 'numeric',
-                  minute: 'numeric',
-                  hour12: true
+                const formattedDate = commitDate.toLocaleString("en-US", {
+                  timeZone: "America/New_York",
+                  year: "numeric",
+                  month: "long",
+                  day: "numeric",
+                  hour: "numeric",
+                  minute: "numeric",
+                  hour12: true,
                 });
-        
-                document.getElementById('last-updated').innerText = `Last updated ${formattedDate} EDT`;
+
+                document.getElementById(
+                  "last-updated"
+                ).innerText = `Last updated ${formattedDate} EDT`;
               })
-              .catch(error => console.error('Error fetching commit data:', error));
+              .catch((error) =>
+                console.error("Error fetching commit data:", error)
+              );
           </script>
           <h2>
             I will try my best to help you guys (here to help, not for profit)
@@ -130,15 +136,11 @@
 
         <p>
           your contribution to this page is most welcome
-          <a
-            href="https://github.com/Pruthviraj-Guddu/drexelfaq"
-            >here</a
-          >
+          <a href="https://github.com/Pruthviraj-Guddu/drexelfaq">here</a>
         </p>
         <p>
           if you have a question, create an
-          <a
-            href="https://github.com/Pruthviraj-Guddu/drexelfaq/issues"
+          <a href="https://github.com/Pruthviraj-Guddu/drexelfaq/issues"
             >new issue</a
           >
         </p>
@@ -314,11 +316,23 @@
             >. bread, basic vegitables, chips, sause.
           </li>
           <li>
+            <strong>one of a farmers market:</strong> it is a very stall beside
+            walking path. like our local indian fruit stall. you will get fresh
+            <b>fruits and berries</b>
+
+            .Address:
+            <a href="https://maps.app.goo.gl/Mj7q62dvLTLNA3g87">
+              3998-3982 Locust Walk, Philadelphia, PA 19104 </a
+            >. tomato and cucuber is very cheaper compared to other stores
+            <strong> carry cash </strong>.
+          </li>
+          <li>
             <strong>GIANT:</strong> the bigger and my personal Favorite.
             <a href="https://maps.app.goo.gl/B1QgxVEZgZJrQQGPA">
               60 N 23rd St, Philadelphia, PA 19103
             </a>
-            huge super market, has more verity
+            huge super market, has more verity (may Favoriteplace for shoping
+            grocerie )
           </li>
           <li>
             <strong>Dana Mandi 2:</strong> Massive Indian grocerie store
@@ -343,6 +357,7 @@
               4249 Walnut St, Philadelphia, PA 19104 </a
             >. (please invite me for Biryani).
           </li>
+
           <li>
             <strong>Patel Brothers:</strong> Indian Groceries, very big, but you
             will need a car to reach here because it is very far.
@@ -605,6 +620,37 @@
             store, but its far more expencive than chicken.
           </li>
         </ul>
+      </section>
+
+      <section>
+        <h2>
+          If you have reached till here means you found this information
+          helpful.
+        </h2>
+        <p>
+          thank you, I do not expect anything back apart from your blessing 🙏
+        </p>
+        <ul>
+          <li>
+            because I have just finished my Masters in Computer Science in June
+            2024. <br />
+            and currently looking for a full time job. no positive ressponse
+            yet. all I need your blessing. <strong>thank you </strong>.
+          </li>
+          <li>any leads for full job, i am here pruthvirajam95@gmail.com</li>
+        </ul>
+
+        <p>
+          your contribution with more answers to this page is most welcome
+          (fork, update, push)
+          <a href="https://github.com/Pruthviraj-Guddu/drexelfaq">here</a>
+        </p>
+        <p>
+          if you have a question, create an
+          <a href="https://github.com/Pruthviraj-Guddu/drexelfaq/issues"
+            >new issue</a
+          >
+        </p>
       </section>
     </div>
   </body>
