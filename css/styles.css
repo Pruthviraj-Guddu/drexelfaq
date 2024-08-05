@@ -12,11 +12,7 @@ footer {
   padding: 1rem 0;
   text-align: center;
 }
-.container {
-  width: 80%;
-  margin: auto;
-  overflow: hidden;
-}
+
 section {
   background: #fff;
   padding: 2rem;
@@ -57,7 +53,32 @@ li {
 }
 @media screen and (min-width: 600px) {
   main {
-      max-width: 600px;
-      margin: 0 auto;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
+}
+
+.header-image {
+  margin-right: 20px;
+}
+
+.header-content {
+  flex: 1;
+}
+
+/* Mobile-friendly styles */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+  .header-image {
+    margin-bottom: 20px;
   }
 }
