@@ -23,7 +23,6 @@ h3 {
   color: #000000;
 }
 #about {
-  background-image: url("Images/tumbleweed-emptystate-lightbg.gif");
   background-size: cover; /* Ensures the background image covers the entire section */
   background-position: center; /* Centers the background image */
   /*padding: 20px; /* Add padding to give some space around the content */
@@ -83,14 +82,14 @@ li {
   }
 }
 
-
 table {
   margin-left: 20px;
   margin-right: 20px;
   border-collapse: collapse;
   width: calc(100% - 40px); /* Adjust width to account for margins */
 }
-th, td {
+th,
+td {
   border: 1px solid black;
   padding: 8px;
   text-align: left;
@@ -98,7 +97,3 @@ th, td {
 th {
   background-color: #f2f2f2;
 }
-
-
-
-
