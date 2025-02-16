@@ -5,12 +5,30 @@ body {
   padding: 0;
   background-color: #f4f4f4;
 }
-header,
+header {
+  position: relative;
+  background: linear-gradient(
+    60deg,
+    rgba(84, 58, 183, 1) 0%,
+    rgba(0, 172, 193, 1) 100%
+  );
+  color: white;
+  padding-bottom: 80px; /* To give space for the waves */
+}
+
+/*header,*/
 footer {
   background: #2575e6;
   color: #fff;
   padding: 1rem 0;
   text-align: center;
+}
+.container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 80%;
+  margin: auto;
 }
 
 section {
@@ -80,6 +98,13 @@ li {
   .header-image {
     margin-bottom: 20px;
   }
+  .waves-container {
+    height: 90px;
+  }
+
+  .header {
+    padding-bottom: 80px; /* Adjust the padding for smaller screens */
+  }
 }
 
 table {
@@ -96,4 +121,54 @@ td {
 }
 th {
   background-color: #f2f2f2;
+}
+
+.waves-container {
+  position: absolute; /* Position waves relative to the header */
+  bottom: 0; /* Anchor the waves at the bottom of the header */
+  left: 0;
+  width: 100%;
+  height: 15vh; /* Height of the wave */
+  overflow: hidden; /* Hide any overflow of the wave */
+}
+
+.waves {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin-bottom: -7px; /* Fix Safari gap issue */
+}
+
+.parallax > use {
+  animation: move-forever 25s cubic-bezier(0.55, 0.5, 0.45, 0.5) infinite;
+}
+
+.parallax > use:nth-child(1) {
+  animation-delay: -2s;
+  animation-duration: 7s;
+}
+
+.parallax > use:nth-child(2) {
+  animation-delay: -3s;
+  animation-duration: 10s;
+}
+
+.parallax > use:nth-child(3) {
+  animation-delay: -4s;
+  animation-duration: 13s;
+}
+
+.parallax > use:nth-child(4) {
+  animation-delay: -5s;
+  animation-duration: 20s;
+}
+
+@keyframes move-forever {
+  0% {
+    transform: translate3d(-90px, 0, 0);
+  }
+  100% {
+    transform: translate3d(85px, 0, 0);
+  }
 }
